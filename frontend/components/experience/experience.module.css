@@ -1,0 +1,17 @@
+.experience {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.experience h2{
+    font-size: 2rem;
+}
+
+.experience p {
+  color: #cecccc9f;
+}
+
+.experience hr {
+    border: 1px solid #cecccc42;;
+}

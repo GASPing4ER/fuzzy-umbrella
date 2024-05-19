@@ -1,0 +1,45 @@
+.navigator {
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 15px;
+  border-radius: 15px;
+  border: 1px solid var(--primary-color);
+  background-color: var(--neutral-color);
+}
+
+.navigator ul {
+  font-size: 1rem;
+  font-weight: 600;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.navigator a {
+  text-decoration: none;
+}
+
+.navigator li {
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+.navigator a:hover {
+  color: var(--secondary-color);
+}
+
+.active a {
+  background-color: var(--primary-color);
+  color: var(--neutral-color);
+  padding: 10px 15px;
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+}
+
+.active a:hover {
+  color: var(--neutral-color);
+}
