@@ -5,13 +5,13 @@ import logo from "@/public/logo.svg";
 
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 
 import MembershipForm from "@/components/membership-form/membership-form";
 
 import { getCodes } from "@/lib/codes_actions";
 
-const MembershipPage = () => {
+const MembershipContent = () => {
   const [showForm, setShowForm] = useState(false);
   const [currentCode, setCurrentCode] = useState("");
   const searchParams = useSearchParams();
@@ -57,5 +57,11 @@ const MembershipPage = () => {
     </div>
   );
 };
+
+const MembershipPage = () => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <MembershipContent />
+  </Suspense>
+);
 
 export default MembershipPage;
