@@ -1,0 +1,38 @@
+.container {
+  background-color: var(--neutral-color);
+  height: 100vh;
+  padding-top: 50px;
+  padding-left: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: baseline;
+}
+
+.container p {
+  color: gray;
+  margin-top: -10px;
+}
+
+.profile-pic {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-pic h2 {
+  margin-bottom: 10px;
+}
+
+.container img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+.verify {
+  color: var(--secondary-color);
+  text-decoration: underline;
+  cursor: pointer;
+}

@@ -1,0 +1,7 @@
+.main {
+    padding-left: 350px;
+    padding-top: 50px;
+    background-color: var(--neutral-color);
+    width: 100%;
+    height: 100vh;
+}

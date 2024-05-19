@@ -1,0 +1,39 @@
+.event {
+    width: calc(0.7 *(100vw - 350px));
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 25px;
+    gap: 20px;
+}
+
+.time {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    background-color: #F8EBEC;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.content {
+    flex: 1;
+}
+
+.time h2 {
+    font-size: 3rem;
+    margin-top: -10px;
+}
+
+.event button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--neutral-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 50px;
+    cursor: pointer;
+}

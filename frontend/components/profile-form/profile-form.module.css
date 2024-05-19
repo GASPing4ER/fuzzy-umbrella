@@ -1,0 +1,38 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .abstract-duo {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .abstract-input {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    padding: 10px 50px 10px 10px;
+    border-radius: 10px;
+    width: 300px;
+  }
+  
+  .abstract-input input {
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+  }
+  
+  .abstract-input label {
+    color: gray;
+  }
+  
+  .form-button {
+    color: var(--neutral-color);
+    background-color: var(--primary-color);
+    padding: 15px 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    cursor: pointer;
+  }

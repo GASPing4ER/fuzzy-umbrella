@@ -1,0 +1,36 @@
+.glue {
+    display: flex;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.form label {
+    font-size: 0.75rem;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--neutral-color);
+    padding: 7px;
+    border: 1px solid var(--primary-color);
+    border-radius: 50px;
+    align-self: self-end;
+    margin-left: -25px;
+}
+
+.form button {
+    font-size: 0.75rem;
+    cursor: pointer;
+    background-color: var(--neutral-color);
+    color: var(--primary-color);
+    padding: 7.5px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.form button {
+    align-self: self-end;
+}

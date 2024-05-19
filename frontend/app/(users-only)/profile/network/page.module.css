@@ -1,0 +1,19 @@
+.main {
+    min-height: 100vh;
+    padding-top: 50px;
+    padding-left: 350px;
+    background-color: var(--neutral-color);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact button {
+    margin-left: 25px;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--neutral-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    cursor: pointer;
+}

@@ -1,0 +1,68 @@
+.dashboard {
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    background-color: var(--neutral-color);
+    color: var(--primary-color);
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px;
+    gap: 20px;
+    border-right: 1px solid var(--primary-color);
+}
+
+.dashboard h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    padding-left: 20px;
+}
+
+.dashboard h2 {
+    align-self: center;
+    margin-top: -10px;
+}
+
+.dashboard img {
+    align-self: center;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.sidebar-items {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.sidebar-items-active {
+    display: flex;
+    color: var(--secondary-color);
+    align-items: center;
+    gap: 5px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.dashboard a {
+    text-decoration: none;
+}
+
+.sidebar-items:hover {
+    color: var(--secondary-color);
+}
+
+.dashboard img {
+    border-radius: 100px;
+}
+
+.dashboard button {
+    background-color: var(--neutral-color);
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+  }
