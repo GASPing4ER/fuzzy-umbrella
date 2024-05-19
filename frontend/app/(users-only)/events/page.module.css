@@ -1,0 +1,15 @@
+.main {
+    background-color: var(--neutral-color);
+    height: 100vh;
+    width: 100%;
+    padding: 50px;
+}
+
+.main h1 {
+    font-size: 3rem;
+}
+
+.eventList {
+    display: flex;
+    gap: 50px;
+}

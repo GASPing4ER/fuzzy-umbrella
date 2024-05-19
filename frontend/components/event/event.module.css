@@ -1,0 +1,33 @@
+.event {
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.event button {
+    padding: 5px 20px;
+    background-color: var(--primary-color);
+    color: var(--neutral-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.details button {
+    background-color: var(--neutrak-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid gray;
+    padding: 25px 25px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}

@@ -1,0 +1,13 @@
+.main {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--neutral-color);
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main img {
+    width: 350px;
+}
