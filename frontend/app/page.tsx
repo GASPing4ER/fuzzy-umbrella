@@ -25,7 +25,7 @@ export default function Home() {
       </main>
 
       <div id="introduction" className={styles.introduction}>
-        <Image src={dinnerImg} alt="dinner with the boys" width={500}/>
+        <Image src={dinnerImg} alt="dinner with the boys" width={500} priority/>
         <div className={styles.introContext}>
           <h2>Welcome to Vanguard Lodge: <br/> Where Brotherhood Meets Excellence</h2>
           <hr />
