@@ -44,7 +44,7 @@ const Navigator = () => {
           </li>
         ) : (
           <li className={pathname === "/login" ? styles.active : ""}>
-            <Link href="/login">Login</Link>
+            <Link href="/login"><FaUser /></Link>
           </li>
         )}
       </ul>

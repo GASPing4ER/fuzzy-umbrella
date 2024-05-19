@@ -76,7 +76,7 @@ const ProfileSecurityPage = () => {
   };
 
   const copyToClipboard = (code) => {
-    navigator.clipboard.writeText(`localhost:3000/membership?code=${code}`);
+    navigator.clipboard.writeText(`https://fuzzy-umbrella-amber.vercel.app/membership?code=${code}`);
   };
 
   return (
