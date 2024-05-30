@@ -35,7 +35,7 @@ const MembershipForm = ({ code }) => {
           updateProfile(auth?.currentUser, {
             displayName: username,
             photoURL:
-              "https://firebasestorage.googleapis.com/v0/b/vanguard-lodge.appspot.com/o/images%2Fanonymous.png?alt=media&token=87f15e04-2a84-49a1-a339-6cc01e966e58",
+              "https://firebasestorage.googleapis.com/v0/b/vanguard-lodge.appspot.com/o/profiles%2Fanonymous.png?alt=media&token=017e8674-5f69-498b-96fb-01bd71a00133",
           });
           localStorage.setItem("user", auth.currentUser);
           sendEmailVerification(auth.currentUser);

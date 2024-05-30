@@ -14,7 +14,11 @@ const Event = ({ event, eventId }) => {
         <p>{event.description}</p>
         <div className={styles.buttons}>
           <button onClick={() => handleEventJoining(eventId)}>Join</button>
-          <div className={styles.details}><Link href={`/event/${eventId}`}><button>Details</button></Link></div>
+          <div className={styles.details}>
+            <Link href={`/event/${eventId}`}>
+              <button>Details</button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

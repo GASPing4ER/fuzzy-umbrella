@@ -2,26 +2,15 @@
 
 import styles from "./page.module.css";
 import { auth, database } from "@/firebase-config";
-import { useEffect, useState } from "react";
 import { ref, get as getFirebaseData, update } from "firebase/database";
 import Member from "@/components/member/member";
 import { getUsers } from "@/lib/users_actions";
+import { useGetUserNetwork } from "@/hooks";
 
 const ProfileNetworkPage = () => {
   const user = auth.currentUser;
-  const [myNetwork, setMyNetwork] = useState();
-  const [users, setUsers] = useState();
 
-  useEffect(() => {
-    const getMyUser = async () => {
-      const userData = await getUsers();
-      if (userData[user.uid].myNetwork) {
-        setMyNetwork(userData[user.uid].myNetwork);
-        setUsers(userData);
-      }
-    };
-    getMyUser();
-  }, []);
+  const { myNetwork, setMyNetwork, users } = useGetUserNetwork(user, getUsers);
 
   const handleDeletion = async (chosenId) => {
     try {

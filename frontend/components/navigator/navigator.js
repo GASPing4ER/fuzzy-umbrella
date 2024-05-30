@@ -6,19 +6,10 @@ import { FaUser } from "react-icons/fa";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useCheckLoggedIn } from "@/hooks";
 
 const Navigator = () => {
-  const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
-  useEffect(() => {
-    const checkLoggedUser = () => {
-      setIsUserLoggedIn(
-        typeof window !== "undefined" && localStorage.getItem("user")
-      );
-    };
-
-    checkLoggedUser();
-  }, [isUserLoggedIn]);
+  const isUserLoggedIn = useCheckLoggedIn();
   const pathname = usePathname();
 
   return (
@@ -44,7 +35,9 @@ const Navigator = () => {
           </li>
         ) : (
           <li className={pathname === "/login" ? styles.active : ""}>
-            <Link href="/login"><FaUser /></Link>
+            <Link href="/login">
+              <FaUser />
+            </Link>
           </li>
         )}
       </ul>

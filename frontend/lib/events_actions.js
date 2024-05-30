@@ -2,7 +2,7 @@ import { ref, get, update } from "firebase/database";
 import { database } from "@/firebase-config";
 import { auth } from "@/firebase-config";
 
-const user = auth.currentUser
+const user = auth.currentUser;
 
 const getEvents = async () => {
   const eventsRef = ref(database, "events");
@@ -35,6 +35,7 @@ const handleEventJoining = async (eventId) => {
     const { eventData, eventRef } = await getEventData(eventId);
 
     if (eventData) {
+      console.log(user.uid);
       if (eventData.members && eventData.members.includes(user.uid)) {
         alert("You have already joined this event.");
       } else {

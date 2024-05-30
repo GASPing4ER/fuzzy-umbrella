@@ -3,28 +3,17 @@
 import styles from "./check-profile.module.css";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 import { auth } from "@/firebase-config";
 
 import { getUser } from "@/lib/users_actions";
+import { useHandleCheck } from "@/hooks";
 
 const CheckProfile = () => {
   const user = auth.currentUser;
-  const [isProfileChecked, setIsProfileChecked] = useState(false);
 
-  useEffect(() => {
-    const handleCheck = async () => {
-      const userData = await getUser(user.uid);
+  const isProfileChecked = useHandleCheck(getUser, user);
 
-      if (userData && user.emailVerified) {
-        setIsProfileChecked(true);
-      } else {
-        setIsProfileChecked(false);
-      }
-    };
-    handleCheck();
-  }, []);
   if (isProfileChecked === false) {
     return (
       <div className={styles.main}>

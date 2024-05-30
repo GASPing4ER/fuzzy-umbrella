@@ -5,37 +5,18 @@ import logo from "@/public/logo.svg";
 
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState, Suspense } from "react";
+import { Suspense } from "react";
 
 import MembershipForm from "@/components/membership-form/membership-form";
+
+import { useCheckCode } from "@/hooks";
 
 import { getCodes } from "@/lib/codes_actions";
 
 const MembershipContent = () => {
-  const [showForm, setShowForm] = useState(false);
-  const [currentCode, setCurrentCode] = useState("");
   const searchParams = useSearchParams();
-  useEffect(() => {
-    const checkCodeInUrl = async () => {
-      const code = searchParams.get("code");
-      if (code) {
-        const codesData = await getCodes();
-        if (codesData) {
-          const codes = Object.keys(codesData);
-          for (const key in codesData) {
-            const value = codesData[key];
-            if (key === code && value.valid === true) {
-              setShowForm(true);
-              setCurrentCode(code);
-              break;
-            }
-          }
-        }
-      }
-    };
+  const { showForm, currentCode } = useCheckCode(searchParams, getCodes);
 
-    checkCodeInUrl();
-  }, []);
   return (
     <div className={styles.container}>
       {showForm ? (

@@ -15,6 +15,7 @@ const ProfilePage = () => {
     sendEmailVerification(user);
     setIsVerifying(true);
   };
+
   return (
     <div className={styles.container}>
       <h1>Profile</h1>
